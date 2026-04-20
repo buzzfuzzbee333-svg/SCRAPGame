@@ -1,0 +1,47 @@
+{
+  "game": {
+    "name": "Last Scrap",
+    "version": "v1_vertical_slice"
+  },
+  "locked_rules": {
+    "combat_mode": "contact_only",
+    "allow_ranged_enemies": false,
+    "damage_formula": "max(1, attacker_attack - target_defense)"
+  },
+  "economy": {
+    "cash_out_bank_percent": 1.0,
+    "rig_overrun_loss_percent": 0.5,
+    "player_death_loss_percent": 1.0,
+    "surrender_loss_percent": 0.6,
+    "passive_scrap_tick_value": 1,
+    "passive_scrap_tick_interval_seconds": 4,
+    "wave_reward_formula": {
+      "base": 10,
+      "step_per_wave": 5,
+      "description": "10 + ((wave_number - 1) * 5)"
+    }
+  },
+  "player_base": {
+    "max_health": 50,
+    "attack": 7,
+    "defense": 1,
+    "move_speed": 1.25,
+    "attack_interval_seconds": 0.7
+  },
+  "rig_base": {
+    "max_integrity": 120,
+    "defense": 0,
+    "passive_scrap_tick_value": 1,
+    "passive_scrap_tick_interval_seconds": 4
+  },
+  "debug_recommendations": {
+    "start_wave_select": true,
+    "add_secured_scrap": true,
+    "add_unsecured_scrap": true,
+    "clear_current_enemies": true,
+    "damage_player": true,
+    "damage_rig": true,
+    "trigger_wave_complete": true,
+    "temporary_upgrade_unlock": true
+  }
+}
