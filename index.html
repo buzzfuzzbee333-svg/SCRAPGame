@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCRAP — Post-Apocalyptic Survival Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>⚙️ SCRAP</h1>
+  <span class="tagline">Post-Apocalyptic Survival · AI-Narrated</span>
+</header>
+
+<div id="app">
+
+  <!-- ── Setup Screen ── -->
+  <div id="setup-screen">
+    <div id="setup-card">
+      <h2>▶ START GAME</h2>
+      <p>
+        SCRAP is an AI-narrated survival game powered by ChatGPT.
+        Enter your OpenAI API key to begin. Your key is stored only in
+        this browser session and is never sent anywhere except to OpenAI.
+      </p>
+
+      <div class="field">
+        <label for="api-key-input">OpenAI API Key</label>
+        <input
+          type="password"
+          id="api-key-input"
+          placeholder="sk-..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+
+      <div class="field">
+        <label for="model-select">AI Model</label>
+        <select id="model-select">
+          <option value="gpt-4o-mini" selected>gpt-4o-mini (fast &amp; affordable)</option>
+          <option value="gpt-4o">gpt-4o (best quality)</option>
+          <option value="gpt-3.5-turbo">gpt-3.5-turbo (legacy)</option>
+        </select>
+      </div>
+
+      <button class="btn" id="start-btn">Enter the Wasteland →</button>
+
+      <p>
+        Don't have a key?
+        <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer"
+           style="color: var(--accent);">Get one from OpenAI →</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── Game Area (hidden until started) ── -->
+  <div id="game-area" style="display:none;">
+
+    <!-- Log panel -->
+    <div id="log-panel">
+      <div id="log-output"></div>
+    </div>
+
+    <!-- Player input -->
+    <div id="input-area">
+      <input
+        type="text"
+        id="player-input"
+        placeholder="What do you do? (e.g. search for metal scraps)"
+        maxlength="300"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button class="btn" id="send-btn">Send</button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+
+      <!-- AI status -->
+      <div class="panel" style="display:flex; align-items:center; gap:8px; padding:10px 14px;">
+        <div id="ai-status" style="display:flex; align-items:center; gap:8px;">
+          <div class="dot online" id="ai-dot"></div>
+          <span id="ai-status-text">AI Narrator online</span>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="panel">
+        <h3>Status</h3>
+
+        <div class="stat-row">
+          <span class="stat-label">Health</span>
+          <div class="stat-bar-bg">
+            <div class="stat-bar health" id="health-bar" style="width:100%"></div>
+          </div>
+          <span class="stat-val" id="health-val">100</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-label">Hunger</span>
+          <div class="stat-bar-bg">
+            <div class="stat-bar hunger" id="hunger-bar" style="width:100%"></div>
+          </div>
+          <span class="stat-val" id="hunger-val">100</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="stat-label">Energy</span>
+          <div class="stat-bar-bg">
+            <div class="stat-bar energy" id="energy-bar" style="width:100%"></div>
+          </div>
+          <span class="stat-val" id="energy-val">100</span>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="panel">
+        <h3>Location</h3>
+        <div id="location-name">—</div>
+        <div id="location-desc" style="margin-top:6px;"></div>
+      </div>
+
+      <!-- Inventory -->
+      <div class="panel">
+        <h3>Inventory</h3>
+        <ul id="inventory-list">
+          <li class="empty-msg">Nothing yet.</li>
+        </ul>
+      </div>
+
+      <!-- Quick actions -->
+      <div class="panel">
+        <h3>Quick Actions</h3>
+        <div id="quick-actions"></div>
+      </div>
+
+    </aside>
+
+  </div><!-- /#game-area -->
+
+</div><!-- /#app -->
+
+<script src="ai.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
