@@ -1,0 +1,46 @@
+{
+  "enemies": [
+    {
+      "id": "shambler",
+      "name": "Shambler",
+      "role": "basic_pressure",
+      "max_health": 20,
+      "attack": 4,
+      "defense": 1,
+      "speed": 1.0,
+      "contact_range": 1.0,
+      "attack_cooldown_seconds": 1.2,
+      "reward_scrap": 4,
+      "aggro_radius": 8,
+      "target_priority_behavior": "player_if_in_range_else_rig"
+    },
+    {
+      "id": "brute",
+      "name": "Brute",
+      "role": "tanky_threat",
+      "max_health": 40,
+      "attack": 8,
+      "defense": 3,
+      "speed": 0.7,
+      "contact_range": 1.1,
+      "attack_cooldown_seconds": 1.5,
+      "reward_scrap": 8,
+      "aggro_radius": 8,
+      "target_priority_behavior": "player_if_in_range_else_rig"
+    },
+    {
+      "id": "runner",
+      "name": "Runner",
+      "role": "positioning_punish",
+      "max_health": 16,
+      "attack": 5,
+      "defense": 0,
+      "speed": 1.6,
+      "contact_range": 0.9,
+      "attack_cooldown_seconds": 0.9,
+      "reward_scrap": 5,
+      "aggro_radius": 10,
+      "target_priority_behavior": "player_if_in_range_else_rig"
+    }
+  ]
+}
