@@ -1,0 +1,99 @@
+{
+  "wave_completion_behavior": {
+    "open_cashout_window_after_clear": true,
+    "open_cashout_once_per_wave": true
+  },
+  "waves": [
+    {
+      "wave_number": 1,
+      "enemies": {
+        "shambler": 4,
+        "brute": 0,
+        "runner": 0
+      },
+      "wave_reward": 10
+    },
+    {
+      "wave_number": 2,
+      "enemies": {
+        "shambler": 6,
+        "brute": 0,
+        "runner": 0
+      },
+      "wave_reward": 15
+    },
+    {
+      "wave_number": 3,
+      "enemies": {
+        "shambler": 6,
+        "brute": 1,
+        "runner": 0
+      },
+      "wave_reward": 20
+    },
+    {
+      "wave_number": 4,
+      "enemies": {
+        "shambler": 8,
+        "brute": 1,
+        "runner": 0
+      },
+      "wave_reward": 25
+    },
+    {
+      "wave_number": 5,
+      "enemies": {
+        "shambler": 8,
+        "brute": 2,
+        "runner": 1
+      },
+      "wave_reward": 30
+    },
+    {
+      "wave_number": 6,
+      "enemies": {
+        "shambler": 10,
+        "brute": 2,
+        "runner": 2
+      },
+      "wave_reward": 35
+    },
+    {
+      "wave_number": 7,
+      "enemies": {
+        "shambler": 12,
+        "brute": 2,
+        "runner": 2
+      },
+      "wave_reward": 40
+    },
+    {
+      "wave_number": 8,
+      "enemies": {
+        "shambler": 12,
+        "brute": 3,
+        "runner": 2
+      },
+      "wave_reward": 45
+    },
+    {
+      "wave_number": 9,
+      "enemies": {
+        "shambler": 14,
+        "brute": 3,
+        "runner": 3
+      },
+      "wave_reward": 50
+    },
+    {
+      "wave_number": 10,
+      "enemies": {
+        "shambler": 16,
+        "brute": 3,
+        "runner": 4
+      },
+      "wave_reward": 55
+    }
+  ],
+  "post_wave_10_scaling_note": "Use explicit waves 1-10 as teaching waves, then extend with formula-driven scaling later if needed."
+}
