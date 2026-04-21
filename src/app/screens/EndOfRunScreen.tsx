@@ -11,10 +11,10 @@ interface Props {
 }
 
 const END_TITLES: Record<string, string> = {
-  cash_out: '&#10003; CASHED OUT',
-  rig_overrun: '&#10007; RIG OVERRUN',
-  player_death: '&#10007; RUNNER DOWN',
-  surrender: '&#8617; SURRENDERED',
+  cash_out: '✓ CASHED OUT',
+  rig_overrun: '✗ RIG OVERRUN',
+  player_death: '✗ RUNNER DOWN',
+  surrender: '↩ SURRENDERED',
 };
 
 const END_COLORS: Record<string, string> = {
@@ -60,9 +60,9 @@ export default function EndOfRunScreen({ summary, meta, onPlayAgain, onUpgrades,
         </div>
 
         <div className="button-group">
-          <button className="btn btn-primary" onClick={onPlayAgain}>&#9658; PLAY AGAIN</button>
-          <button className="btn btn-secondary" onClick={onUpgrades}>&#9881; UPGRADES</button>
-          <button className="btn btn-ghost" onClick={onTitle}>&#8592; TITLE</button>
+          <button className="btn btn-primary" onClick={onPlayAgain}>▶ PLAY AGAIN</button>
+          <button className="btn btn-secondary" onClick={onUpgrades}>⚙ UPGRADES</button>
+          <button className="btn btn-ghost" onClick={onTitle}>← TITLE</button>
         </div>
       </div>
     </div>

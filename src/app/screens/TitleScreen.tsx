@@ -44,8 +44,8 @@ export default function TitleScreen({ onStartRun, onOpenUpgrades, meta }: Props)
         </div>
 
         <div className="button-group">
-          <button className="btn btn-primary" onClick={onStartRun}>&#9658; START RUN</button>
-          <button className="btn btn-secondary" onClick={onOpenUpgrades}>&#9881; UPGRADES</button>
+          <button className="btn btn-primary" onClick={onStartRun}>▶ START RUN</button>
+          <button className="btn btn-secondary" onClick={onOpenUpgrades}>⚙ UPGRADES</button>
         </div>
 
         <div className="title-controls-hint">

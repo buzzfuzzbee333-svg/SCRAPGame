@@ -21,12 +21,12 @@ export default function CashoutModal({ waveCleared, unsecuredScrap, onCashOut, o
             <button className="btn btn-success cashout-btn" onClick={onCashOut}>
               CASH OUT
             </button>
-            <div className="cashout-detail">Bank 100% &#8594; {unsecuredScrap} scrap secured</div>
+            <div className="cashout-detail">Bank 100% → {unsecuredScrap} scrap secured</div>
           </div>
 
           <div className="cashout-option">
             <button className="btn btn-danger cashout-btn" onClick={onContinue}>
-              CONTINUE &#8594;
+              CONTINUE →
             </button>
             <div className="cashout-detail">Risk it · Next wave awaits</div>
           </div>

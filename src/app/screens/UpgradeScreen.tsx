@@ -41,7 +41,7 @@ export default function UpgradeScreen({ meta, onUpdateMeta, onBack }: Props) {
       <div className="screen-content">
         <h1 className="screen-title">UPGRADES</h1>
         <div className="secured-scrap-display">
-          &#9881; SECURED SCRAP: <span className="scrap-color">{meta.securedScrap}</span>
+          ⚙ SECURED SCRAP: <span className="scrap-color">{meta.securedScrap}</span>
         </div>
 
         {categories.map((cat) => (
@@ -61,7 +61,7 @@ export default function UpgradeScreen({ meta, onUpdateMeta, onBack }: Props) {
                         <div className="upgrade-name">{u.name}</div>
                         <div className="upgrade-desc">{u.description}</div>
                         <div className="upgrade-level">
-                          {'&#9646;'.repeat(level)}{'&#9647;'.repeat(Math.max(0, u.level_cap - level))}
+                          {'\u25AE'.repeat(level)}{'\u25AF'.repeat(Math.max(0, u.level_cap - level))}
                           <span className="upgrade-level-text"> {level}/{u.level_cap}</span>
                         </div>
                       </div>
@@ -74,7 +74,7 @@ export default function UpgradeScreen({ meta, onUpdateMeta, onBack }: Props) {
                             onClick={() => buyUpgrade(u.id)}
                             disabled={!affordable}
                           >
-                            {cost} &#9881;
+                            {cost} ⚙
                           </button>
                         )}
                       </div>

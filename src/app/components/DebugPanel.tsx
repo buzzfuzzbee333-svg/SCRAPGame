@@ -12,7 +12,7 @@ export default function DebugPanel({ gameState, onAction, onClose }: Props) {
     <div className="debug-panel">
       <div className="debug-header">
         <span>DEBUG</span>
-        <button className="btn btn-ghost btn-sm" onClick={onClose}>&#10005;</button>
+        <button className="btn btn-ghost btn-sm" onClick={onClose}>✕</button>
       </div>
       <div className="debug-info">
         <div>Phase: {gameState.phase}</div>

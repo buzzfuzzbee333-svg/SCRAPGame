@@ -78,8 +78,8 @@ export default function LoadoutScreen({ meta, onBeginRun, onBack }: Props) {
         </div>
 
         <div className="button-group">
-          <button className="btn btn-primary" onClick={() => onBeginRun(debugWave)}>&#9658; BEGIN RUN</button>
-          <button className="btn btn-ghost" onClick={onBack}>&#8592; BACK</button>
+          <button className="btn btn-primary" onClick={() => onBeginRun(debugWave)}>▶ BEGIN RUN</button>
+          <button className="btn btn-ghost" onClick={onBack}>← BACK</button>
         </div>
       </div>
     </div>

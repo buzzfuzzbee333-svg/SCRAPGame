@@ -209,7 +209,7 @@ export default function ArenaScreen({ meta, startAtWave, onRunEnd }: Props) {
           <div className="hud-wave">WAVE {hudData.wave}</div>
         </div>
         <div className="hud-right">
-          <div className="hud-scrap">&#9881; {hudData.unsecuredScrap}</div>
+          <div className="hud-scrap">⚙ {hudData.unsecuredScrap}</div>
           <button className="btn btn-ghost btn-sm" onClick={onSurrender}>QUIT</button>
           <button className="btn btn-ghost btn-sm" onClick={() => setDebugOpen((v) => !v)}>DBG</button>
         </div>
