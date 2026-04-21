@@ -1,0 +1,119 @@
+{
+  "top_level_states": [
+    "title",
+    "pre_run_loadout",
+    "in_run",
+    "end_of_run_summary",
+    "upgrade_screen"
+  ],
+  "in_run_substates": [
+    "run_start",
+    "wave_active",
+    "cashout_window",
+    "player_death_resolution",
+    "rig_overrun_resolution",
+    "pause"
+  ],
+  "transitions": [
+    {
+      "from": "title",
+      "to": "pre_run_loadout",
+      "trigger": "start_run"
+    },
+    {
+      "from": "title",
+      "to": "upgrade_screen",
+      "trigger": "open_upgrades"
+    },
+    {
+      "from": "pre_run_loadout",
+      "to": "run_start",
+      "trigger": "begin_run"
+    },
+    {
+      "from": "pre_run_loadout",
+      "to": "title",
+      "trigger": "back"
+    },
+    {
+      "from": "run_start",
+      "to": "wave_active",
+      "trigger": "initialization_complete"
+    },
+    {
+      "from": "wave_active",
+      "to": "cashout_window",
+      "trigger": "wave_cleared"
+    },
+    {
+      "from": "wave_active",
+      "to": "player_death_resolution",
+      "trigger": "player_hp_zero"
+    },
+    {
+      "from": "wave_active",
+      "to": "rig_overrun_resolution",
+      "trigger": "rig_integrity_zero"
+    },
+    {
+      "from": "wave_active",
+      "to": "pause",
+      "trigger": "pause_input"
+    },
+    {
+      "from": "cashout_window",
+      "to": "end_of_run_summary",
+      "trigger": "cash_out"
+    },
+    {
+      "from": "cashout_window",
+      "to": "wave_active",
+      "trigger": "continue_next_wave"
+    },
+    {
+      "from": "player_death_resolution",
+      "to": "end_of_run_summary",
+      "trigger": "resolution_complete"
+    },
+    {
+      "from": "rig_overrun_resolution",
+      "to": "end_of_run_summary",
+      "trigger": "resolution_complete"
+    },
+    {
+      "from": "pause",
+      "to": "wave_active",
+      "trigger": "resume"
+    },
+    {
+      "from": "pause",
+      "to": "end_of_run_summary",
+      "trigger": "quit_run"
+    },
+    {
+      "from": "end_of_run_summary",
+      "to": "upgrade_screen",
+      "trigger": "go_to_upgrades"
+    },
+    {
+      "from": "end_of_run_summary",
+      "to": "title",
+      "trigger": "return_to_title"
+    },
+    {
+      "from": "end_of_run_summary",
+      "to": "pre_run_loadout",
+      "trigger": "start_another_run"
+    },
+    {
+      "from": "upgrade_screen",
+      "to": "title",
+      "trigger": "back_to_title"
+    },
+    {
+      "from": "upgrade_screen",
+      "to": "pre_run_loadout",
+      "trigger": "start_run"
+    }
+  ]
+}
