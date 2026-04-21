@@ -5,9 +5,20 @@
   "description": "Engine-agnostic TypeScript core scaffold for the Last Scrap vertical slice.",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "check": "tsc -p tsconfig.json --noEmit"
+    "check": "tsc -p tsconfig.json --noEmit",
+    "dev": "vite",
+    "build:web": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.8.3"
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.9"
+  },
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   }
 }
