@@ -1,0 +1,117 @@
+{
+  "cost_formula": {
+    "type": "linear",
+    "description": "base_cost + (current_level * cost_step)"
+  },
+  "upgrades": [
+    {
+      "id": "weapon_damage",
+      "name": "Weapon Damage",
+      "category": "combat",
+      "description": "+1 attack per level",
+      "base_cost": 20,
+      "cost_step": 10,
+      "level_cap": 10,
+      "effect_type": "player_attack_flat",
+      "effect_per_level": 1,
+      "apply_mode": "flat"
+    },
+    {
+      "id": "attack_speed",
+      "name": "Attack Speed",
+      "category": "combat",
+      "description": "-0.03 sec attack interval per level",
+      "base_cost": 25,
+      "cost_step": 12,
+      "level_cap": 8,
+      "effect_type": "player_attack_interval_delta",
+      "effect_per_level": -0.03,
+      "apply_mode": "delta"
+    },
+    {
+      "id": "max_health",
+      "name": "Max Health",
+      "category": "survival",
+      "description": "+5 HP per level",
+      "base_cost": 20,
+      "cost_step": 10,
+      "level_cap": 10,
+      "effect_type": "player_max_health_flat",
+      "effect_per_level": 5,
+      "apply_mode": "flat"
+    },
+    {
+      "id": "defense_plating",
+      "name": "Defense Plating",
+      "category": "survival",
+      "description": "+1 defense per level",
+      "base_cost": 25,
+      "cost_step": 15,
+      "level_cap": 6,
+      "effect_type": "player_defense_flat",
+      "effect_per_level": 1,
+      "apply_mode": "flat"
+    },
+    {
+      "id": "boots",
+      "name": "Boots",
+      "category": "survival",
+      "description": "+0.05 move speed per level",
+      "base_cost": 20,
+      "cost_step": 12,
+      "level_cap": 6,
+      "effect_type": "player_move_speed_flat",
+      "effect_per_level": 0.05,
+      "apply_mode": "flat"
+    },
+    {
+      "id": "rig_integrity",
+      "name": "Rig Integrity",
+      "category": "rig",
+      "description": "+15 rig HP per level",
+      "base_cost": 25,
+      "cost_step": 15,
+      "level_cap": 8,
+      "effect_type": "rig_max_integrity_flat",
+      "effect_per_level": 15,
+      "apply_mode": "flat"
+    },
+    {
+      "id": "rig_reinforcement",
+      "name": "Rig Reinforcement",
+      "category": "rig",
+      "description": "+1 rig defense per level",
+      "base_cost": 30,
+      "cost_step": 18,
+      "level_cap": 5,
+      "effect_type": "rig_defense_flat",
+      "effect_per_level": 1,
+      "apply_mode": "flat"
+    },
+    {
+      "id": "salvage_multiplier",
+      "name": "Salvage Multiplier",
+      "category": "economy",
+      "description": "+10% kill and wave scrap per level",
+      "base_cost": 30,
+      "cost_step": 20,
+      "level_cap": 8,
+      "effect_type": "scrap_multiplier_percent",
+      "effect_per_level": 0.1,
+      "apply_mode": "multiplier"
+    },
+    {
+      "id": "rig_output",
+      "name": "Rig Output",
+      "category": "economy",
+      "description": "Passive scrap output improves every 2 levels",
+      "base_cost": 35,
+      "cost_step": 20,
+      "level_cap": 6,
+      "effect_type": "rig_passive_scrap_step",
+      "effect_per_level": 1,
+      "apply_mode": "step_every_two_levels",
+      "step_interval_levels": 2
+    }
+  ]
+}
